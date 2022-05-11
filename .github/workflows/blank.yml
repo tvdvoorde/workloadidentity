@@ -8,6 +8,7 @@ permissions:
       
 jobs: 
   build-and-deploy:
+    container: centos:7
     runs-on: ubuntu-latest
     steps:
     - name: 'Az CLI login'
@@ -22,3 +23,4 @@ jobs:
           az account show
           az group list
           pwd
+          cat /etc/os-release
